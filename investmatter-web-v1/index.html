@@ -5,43 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investmatter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* Custom CSS for the background image section */
+        .bg-image {
+            background-image: url('images/Background.jpg'); /* Replace 'your-image.jpg' with your image URL */
+            background-size: cover;
+            background-position: center;
+            min-height: 140vh;
+        }
+        #imagetext {
+          font-size: 60px;
+          color: black;
+        }
+        .gridtitle {
+          font-size: 10px;
+          text-align: center;
+          padding: 40px;
+        }
+        .text-overlay {
+            color: black;
+            font-size: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: right;
+        }
+        .read-more-btn {
+            background-color: black;
+            color: white;
+        }
+        
+        .box {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            transition: transform 0.3s; 
+            border: 2px solid #000000; 
+            padding: 20px;
+            border-radius: 0px;
+        }
+        
+        .box:hover {
+            transform: translateY(-50px); /* Move the box higher on hover */
+        }
+        .box-text {
+            font-size: 1.2rem; /* Adjust text size as needed */
+        }
+
+        /* Grey background for the horizontal text */
+        .horizontal-text-container {
+            background-color: #f2f2f2; /* Grey background color */
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Style for the horizontal text */
+        .horizontal-text {
+            display: inline-block;
+            padding: 20px;
+            padding-inline: 10px;
+            font-weight: bolder;
+            font-size: 30px; /* Adjust text size as needed */
+            color: black; /* Text color */
+            margin: 0 10px; /* Add spacing between text items */
+        }
+       
+    </style>
 </head>
 <body>
 
-<!--Navigation section-->
+<!-- Navigation section -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid ms-4">
-      <a class="navbar-brand" href="#">Investmatter Group</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container-fluid mx-5">
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav me-4">
+        <a class="navbar-brand" href="#">Investmatter Group</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid mx-5">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <button class="btn btn btn-dark"
-                style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;"
-                type="submit">Get Started</button>
-              </li>
-        </ul>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me-4">
+              <li class="nav-item">
+                  <button class="btn btn btn-dark"
+                  style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;"
+                  type="submit">Get Started</button>
+                </li>
+          </ul>
+        </div>
+      </div>
+</nav>
+
+<!-- Background image section with text overlay -->
+<section class="bg-image d-flex justify-content-end align-items-center">
+    <div class="text-overlay text-white">
+        <h1 id="imagetext">Why Invest<br>In Tanzania?</h1>
+        <a href="#" class="btn btn-dark read-more-btn">Read More</a>
+    </div>
+</section>
+
+<div class="gridtitle">
+  <h1 id="gridtitle">REASONS TO INVEST</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="box">
+              <img src="images/pen.png" height="80px">
+              <p class="box-text">
+                  Stable Economy is an example of the world 
+                  that is currently facing global warming which
+                  is a threat to the humanity and the universe.
+              </p>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="box">
+              <img src="images/cart.png" height="80px">
+              <p class="box-text">
+                  Stable Economy is an example of the world 
+                  that is currently facing global warming which
+                  is a threat to the humanity and the universe.
+              </p>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="box">
+              <img src="images/bank.png" height="80px">
+              <p class="box-text">
+                  Stable Economy is an example of the world 
+                  that is currently facing global warming which
+                  is a threat to the humanity and the universe.
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="horizontal-text-container">
+        <p class="horizontal-text">5+<br>Years of Experience</p>
+        <p class="horizontal-text">30+<br>No of Projects Done</p>
+        <p class="horizontal-text">10+<br>No of Investors</p>
       </div>
     </div>
+  </div>
 </div>
-  </nav>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 </html>
