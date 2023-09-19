@@ -14,13 +14,13 @@
             min-height: 140vh;
         }
         #imagetext {
-          font-size: 60px;
-          color: black;
+          font-size: 80px;
+          color: #002349;
         }
         .gridtitle {
-          font-size: 10px;
+          font-size: 1px;
           text-align: center;
-          padding: 40px;
+          padding: 30px;
         }
         .text-overlay {
             color: black;
@@ -30,33 +30,51 @@
             text-align: right;
         }
         .read-more-btn {
-            background-color: black;
+            background-color: #002349;
             color: white;
         }
-        
+        .col {
+          text-align: center;
+          padding: 30px;
+          
+        }
         .box {
             text-align: center;
-            margin-top: 20px;
-            margin-bottom: 50px;
+            margin-top: 10px;
+            margin-bottom: 30px;
             transition: transform 0.3s; 
             border: 2px solid #000000; 
             padding: 20px;
             border-radius: 0px;
         }
-        
+        .grid-item {
+            border: 0px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        #top {
+          margin-bottom: 70px;
+        }
+        #competence-image {
+          margin-bottom: 20px;
+        }
         .box:hover {
             transform: translateY(-50px); /* Move the box higher on hover */
         }
         .box-text {
             font-size: 1.2rem; /* Adjust text size as needed */
         }
-
+        h1 {
+          font-size: 30px;
+        }
         /* Grey background for the horizontal text */
         .horizontal-text-container {
-            background-color: #f2f2f2; /* Grey background color */
+            position: absolute;
+            background-color: #002349; /* Grey background color */
             text-align: center;
+            width: max-content;
             padding: 10px;
-            margin-top: 20px;
+            margin-top: 10px;
             border-radius: 10px;
         }
 
@@ -67,10 +85,24 @@
             padding-inline: 10px;
             font-weight: bolder;
             font-size: 30px; /* Adjust text size as needed */
-            color: black; /* Text color */
-            margin: 0 10px; /* Add spacing between text items */
+            color: white; /* Text color */
+            margin: 0 40px; /* Add spacing between text items */
         }
-       
+        #competence-grid {
+          padding: 50px;
+          margin-top: 140px;
+        }
+        #projectInvestText {
+          font-size: 40px;
+        }
+        #projectInvestTextButton {
+          border-color: #957C3D;
+          align-items: center;
+          font-size: 22px;
+          padding: 10px;
+          padding-inline: 40px;
+          border-radius: 15px;
+        }
     </style>
 </head>
 <body>
@@ -113,7 +145,7 @@
 <section class="bg-image d-flex justify-content-end align-items-center">
     <div class="text-overlay text-white">
         <h1 id="imagetext">Why Invest<br>In Tanzania?</h1>
-        <a href="#" class="btn btn-dark read-more-btn">Read More</a>
+        <a href="#gridtitle" class="btn btn-dark read-more-btn">Read More</a>
     </div>
 </section>
 
@@ -155,18 +187,76 @@
       </div>
   </div>
 </div>
+<div class="gridtitle">
+  <h1 id="gridtitle">NUMBERS NEVER LIE</h1>
+</div>
 
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="horizontal-text-container">
-        <p class="horizontal-text">5+<br>Years of Experience</p>
-        <p class="horizontal-text">30+<br>No of Projects Done</p>
-        <p class="horizontal-text">10+<br>No of Investors</p>
-      </div>
+      <div class="container-fluid">
+        <div class="horizontal-text-container">
+          <p class="horizontal-text">5+<br>Years of Experience</p>
+          
+          <p class="horizontal-text">30+<br>No of Projects Done</p>
+          
+          <p class="horizontal-text">10+<br>No of Investors</p>
+        </div>
     </div>
   </div>
 </div>
+
+<div class="container" id="competence-grid">
+  <div class="gridtitle">
+  <h1 id="gridtitle">OUR AREA OF COMPETENCE</h1>
+</div>
+    <div class="row">
+        <div class="col grid-item">
+            <img src="images/sun.png" alt="" height="80px" id="competence-image">
+            <p id="top">
+                Stable Economy is an example of the world 
+                that is currently facing global warming which
+                is a threat to humanity and the universe.
+            </p>
+            <img src="images/tractor.png" alt="" height="80px" id="competence-image">
+            <p>
+                Stable Economy is an example of the world 
+                that is currently facing global warming which
+                is a threat to humanity and the universe.
+            </p>
+        </div>
+        <div class="col grid-item">
+            <img src="images/building.png" alt="" height="80px" id="competence-image">
+            <p id="top">
+                Stable Economy is an example of the world 
+                that is currently facing global warming which
+                is a threat to humanity and the universe.
+            </p>
+            <img src="images/bank.png" alt="" height="80px" id="competence-image">
+            <p>
+                Stable Economy is an example of the world 
+                that is currently facing global warming which
+                is a threat to humanity and the universe.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container-fluid">
+        <div class="horizontal-text-container">
+          <p class="horizontal-text" id="projectInvestText">Looking for a potential project to invest?</p>
+          <a href="#" class="btn btn-dark read-more-btn" id="projectInvestTextButton">Get Started</a>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
