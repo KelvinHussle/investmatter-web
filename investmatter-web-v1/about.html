@@ -14,11 +14,21 @@
       background-image: url('images/Background.jpg');
       background-size: cover;
       background-position: center;
-      border-radius: 20px;
     }
+    .box {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #000000; 
+            padding: 15px;
+            font-size: 1rem;
+        }
     #shape{
       background-color: #002349;
       height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .gridtitle {
@@ -29,7 +39,7 @@
 
     .about-image {
       height: 300px;
-      border-radius: 20px;
+      border: black .5px solid;
       background-image: url('images/competence.jpg');
       background-size: cover;
       background-position: start;
@@ -38,12 +48,33 @@
     .box {
       text-align: center;
       margin-top: 10px;
-      margin-bottom: 30px;
-      transition: transform 0.3s;
+      margin-bottom: 30 px;
       border: 2px solid #000000;
       padding: 20px;
       border-radius: 0px;
     }
+    .box-text {
+            font-size: 1rem; /* Adjust text size as needed */
+        }
+    #about-container{
+      background-color: bisque;
+      background-size: contain;
+    }
+    /* For responsiveness use these media queries */
+    @media screen and (max-width: 576px) {
+  /* Styles for small screen devices with a maximum width of 576px */
+  p{
+    font-size: 4vw;
+  }
+  h2,h3{
+    font-size: 6vw;
+  }
+  .about-image {
+    height: 350px;
+    background-size: cover;
+  }
+}
+
   </style>
 </head>
 
@@ -83,69 +114,75 @@
       </div>
     </div>
   </nav>
+  <!--About Us Banner-->
   <div class="container d-flex justify-content-center align-items-center" id="container">
     <p class="text-center text-white">About Us</p>
   </div>
-
-  <div class="container mt-4">
-    <div class="row d-flex">
-      <div class="col">
-        <h2>Who are we</h2>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat veritatis iure nesciunt aperiam illo!
-          Nostrum, veniam? Nesciunt libero explicabo natus?</p>
+  <!--Who are we container-->
+  <div class="container mt-4" id="about-container">
+    <div class="row p-3 d-flex justify-content-start align-items-start">
+      <div class="col-md-6">
+        <h3 class="d-flex align-items-center justify-content-center">Who are we</h3>
+        <p> Investmatter is a leading investment advisory firm that specializes 
+          in attracting foreign investors to Tanzania. We believe that Tanzania 
+          is the next big investment opportunity, and we are committed to helping 
+          investors capitalize on this potential.
+        </p>
+        <p>
+          We have a deep understanding of the Tanzanian investment landscape, 
+          and we have a proven track record of success in helping investors achieve their goals.
+           Our vision is to be the leading investment advisory firm in Tanzania. 
+           We want to help make Tanzania the most attractive investment destination in the world.
+        </p>
       </div>
-      <div class="col about-image">
+      <div class="col-md-6 about-image img-fluid">
       </div>
     </div>
   </div>
 
-  <div class=" container gridtitle">
-    <h1 id="gridtitle">Why Choose Us</h1>
+  <div class="container mt-4 gridtitle">
+    <h3>Why Choose Us</h3>
   </div>
-  <div class="container mt-4">
+  <div class="container">
     <div class="row">
       <div class="col-md-4">
         <div class="box">
-          <h3>Customer Support</h3>
-          <img src="images/pen.png" height="80px">
+          <h5>Market Research and Analysis</h5>
+          <img src="images/analytics.png" height="80px">
           <p class="box-text">
-            Stable Economy is an example of the world
-            that is currently facing global warming which
-            is a threat to the humanity and the universe.
+            We have strong team that conducts market research and analysis to 
+            identify the most attractive investment opportunities in Tanzania. 
           </p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="box">
-          <h3>Low Risk Investment</h3>
-          <img src="images/cart.png" height="80px">
+          <h5>Investor Targeting and Outreach</h5>
+          <img src="images/target-audience.png" height="80px">
           <p class="box-text">
-            Stable Economy is an example of the world
-            that is currently facing global warming which
-            is a threat to the humanity and the universe.
+            We target and outreach to potential investors on behalf of our clients.
+            We also have a strong network of relationships with investors around the world.
           </p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="box">
-          <h3>Free Investment Advice</h3>
-          <img src="images/bank.png" height="80px">
+          <h5>Deal Structuring and Negotiation</h5>
+          <img src="images/relationship.png" height="80px">
           <p class="box-text">
-            Stable Economy is an example of the world
-            that is currently facing global warming which
-            is a threat to the humanity and the universe.
+            We have a deep understanding of the legal and regulatory environment in Tanzania, and we help our clients to avoid potential pitfalls.
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid " id="shape">
+  <div class="container-fluid d-md-flex" id="shape">
   <div class="row">
-    <div class="col-md-6">
-        <p class="text-white">Do You Have Something In Mind?</p>
+    <div class="col-md-8">
+        <h5 class="text-white">Do You Have Something in Mind?</h5>
     </div>
-    <div class="col-md-6">
-      <a href="#gridtitle" class="btn btn-dark read-more-btn">Contact Us</a>
+    <div class="col-md-4">
+      <a href="#gridtitle" class="btn btn-dark">Contact Us</a>
     </div>
   </div>
   </div>
