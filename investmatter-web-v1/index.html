@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investmatter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         /* Custom CSS for the background image section */
@@ -13,18 +14,24 @@
             background-position: center;
             min-height: 140vh;
         }
+        @media (max-width: 767px) {
+            .bg-image {
+                min-height: 70vh;
+            }
+        }
         #imagetext {
-          font-size: 80px;
+          font-size: 30px;
           color: #002349;
+          text-align: right;
         }
         .gridtitle {
-          font-size: 1px;
+          font-size: 32px;
           text-align: center;
-          padding: 30px;
+          padding: 10px;
         }
         .text-overlay {
             color: black;
-            font-size: 50px;
+            font-size: 24px;
             padding: 20px;
             border-radius: 10px;
             text-align: right;
@@ -35,44 +42,42 @@
         }
         .col {
           text-align: center;
-          padding: 30px;
-          
+          padding: 15px;
         }
         .box {
             text-align: center;
             margin-top: 10px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             transition: transform 0.3s; 
             border: 2px solid #000000; 
-            padding: 20px;
-            border-radius: 0px;
+            padding: 15px;
+            border-radius: 10px;
         }
         .grid-item {
-            border: 0px solid #ccc;
+            border: 1px solid #ccc;
             padding: 10px;
             text-align: center;
         }
         #top {
-          margin-bottom: 70px;
+          margin-bottom: 30px;
         }
         #competence-image {
           margin-bottom: 20px;
         }
         .box:hover {
-            transform: translateY(-50px); /* Move the box higher on hover */
+            transform: translateY(-10px); /* Move the box higher on hover */
         }
         .box-text {
-            font-size: 1.2rem; /* Adjust text size as needed */
+            font-size: 1rem; /* Adjust text size as needed */
         }
         h1 {
           font-size: 30px;
         }
         /* Grey background for the horizontal text */
         .horizontal-text-container {
-            position: absolute;
+            position: relative;
             background-color: #002349; /* Grey background color */
             text-align: center;
-            width: max-content;
             padding: 10px;
             margin-top: 10px;
             border-radius: 10px;
@@ -81,28 +86,94 @@
         /* Style for the horizontal text */
         .horizontal-text {
             display: inline-block;
-            padding: 20px;
-            padding-inline: 10px;
+            padding: 10px;
             font-weight: bolder;
-            font-size: 30px; /* Adjust text size as needed */
+            font-size: 18px; /* Adjust text size as needed */
             color: white; /* Text color */
-            margin: 0 40px; /* Add spacing between text items */
+            margin: 0 20px; /* Add spacing between text items */
         }
         #competence-grid {
-          padding: 50px;
-          margin-top: 140px;
+          padding: 20px;
+          margin-top: 70px;
         }
-        #projectInvestText {
-          font-size: 40px;
+        #projectInvestmentText {
+          font-size: 32px;
         }
+        .image-text {
+          font-size: 80px;
+          color: #002349;
+          text-align: right;
+        }
+        .faq-question {
+            cursor: pointer;
+            color: #000;
+            font-size: medium;
+        }
+
+        .faq-question:hover {
+            color: #002349; /* Change to blue on hover */
+        }
+
+        .plus-minus-toggle::before {
+            content: "+"; /* Plus sign initially */
+            font-size: 24px;
+            right: 0;
+            color: black;
+            
+            float: right; /* Move to the right */
+            
+        }
+
+        .collapsed .plus-minus-toggle::before {
+            content: "-"; /* Minus sign when collapsed */
+        }
+
+        .faq-container {
+            border: 1px solid black;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid black; /* Add border below each question */
+            padding: px 0; /* Add padding below each question */
+        }
+        .faq-image {
+            height: 500px;
+            width: 800px;
+        }
+        #faqText {
+          font-size: 15px;
+        }
+        .faq-question:focus {
+            outline: none;
+        }
+        .btn:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        @media (max-width: 767px) {
+            .faq-image {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+        /* Adjust font size and alignment for smaller screens */
+        .image-text {
+        font-size: 40px;
+        text-align: right;
+         }
+        }
+       
         #projectInvestTextButton {
-          border-color: #957C3D;
-          align-items: center;
-          font-size: 22px;
-          padding: 10px;
-          padding-inline: 40px;
+          background-color: #957C3D;
+          color: white;
+          font-size: 18px;
+          padding: 10px 20px;
           border-radius: 15px;
+          text-decoration: none; /* Remove underlines from the button */
         }
+       
     </style>
 </head>
 <body>
@@ -114,27 +185,26 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="container-fluid mx-5">
+        <div class="container-fluid mx-2">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item ms-4">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item ms-4">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="#">Services</a>
             </li>
-            <li class="nav-item ms-4">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="#">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav me-4">
               <li class="nav-item">
-                  <button class="btn btn btn-dark"
-                  style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;"
-                  type="submit">Get Started</button>
+                  <a href="#" class="btn btn btn-dark"
+                  style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;">Get Started</a>
                 </li>
           </ul>
         </div>
@@ -144,7 +214,7 @@
 <!-- Background image section with text overlay -->
 <section class="bg-image d-flex justify-content-end align-items-center">
     <div class="text-overlay text-white">
-        <h1 id="imagetext">Why Invest<br>In Tanzania?</h1>
+        <h1 class="image-text">Why Invest<br>In Tanzania?</h1>
         <a href="#gridtitle" class="btn btn-dark read-more-btn">Read More</a>
     </div>
 </section>
@@ -157,31 +227,31 @@
   <div class="row">
       <div class="col-md-4">
           <div class="box">
-              <img src="images/pen.png" height="80px">
+              <img src="images/pen.png" height="60px">
               <p class="box-text">
                   Stable Economy is an example of the world 
                   that is currently facing global warming which
-                  is a threat to the humanity and the universe.
+                  is a threat to humanity and the universe.
               </p>
           </div>
       </div>
       <div class="col-md-4">
           <div class="box">
-              <img src="images/cart.png" height="80px">
+              <img src="images/cart.png" height="60px">
               <p class="box-text">
                   Stable Economy is an example of the world 
                   that is currently facing global warming which
-                  is a threat to the humanity and the universe.
+                  is a threat to humanity and the universe.
               </p>
           </div>
       </div>
       <div class="col-md-4">
           <div class="box">
-              <img src="images/bank.png" height="80px">
+              <img src="images/bank.png" height="60px">
               <p class="box-text">
                   Stable Economy is an example of the world 
                   that is currently facing global warming which
-                  is a threat to the humanity and the universe.
+                  is a threat to humanity and the universe.
               </p>
           </div>
       </div>
@@ -212,13 +282,13 @@
 </div>
     <div class="row">
         <div class="col grid-item">
-            <img src="images/sun.png" alt="" height="80px" id="competence-image">
+            <img src="images/sun.png" alt="" height="60px" id="competence-image">
             <p id="top">
                 Stable Economy is an example of the world 
                 that is currently facing global warming which
                 is a threat to humanity and the universe.
             </p>
-            <img src="images/tractor.png" alt="" height="80px" id="competence-image">
+            <img src="images/tractor.png" alt="" height="60px" id="competence-image">
             <p>
                 Stable Economy is an example of the world 
                 that is currently facing global warming which
@@ -226,13 +296,13 @@
             </p>
         </div>
         <div class="col grid-item">
-            <img src="images/building.png" alt="" height="80px" id="competence-image">
+            <img src="images/building.png" alt="" height="60px" id="competence-image">
             <p id="top">
                 Stable Economy is an example of the world 
                 that is currently facing global warming which
                 is a threat to humanity and the universe.
             </p>
-            <img src="images/bank.png" alt="" height="80px" id="competence-image">
+            <img src="images/bank.png" alt="" height="60px" id="competence-image">
             <p>
                 Stable Economy is an example of the world 
                 that is currently facing global warming which
@@ -246,11 +316,88 @@
     <div class="col-md-12">
       <div class="container-fluid">
         <div class="horizontal-text-container">
-          <p class="horizontal-text" id="projectInvestText">Looking for a potential project to invest?</p>
+          <p class="horizontal-text" id="projectInvestmentText">Looking for a potential project to invest?</p>
           <a href="#" class="btn btn-dark read-more-btn" id="projectInvestTextButton">Get Started</a>
         </div>
     </div>
     </div>
+  </div>
+</div>
+<div class="container" id="competence-grid">
+  <div class="gridtitle">
+  <h1 id="gridtitle">WHAT OUR CUSTOMERS ASK</h1>
+</div>
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-8">
+          <h2>Frequently Asked Questions</h2>
+          <h1 id="faqText">This is where you will get the most asked question which help you to get the information you need</h1>
+          <div class="faq-container">
+              <!-- FAQ items -->
+              <div class="faq-item">
+                  <h5 class="faq-question">
+                      Question 1: What is an investment?
+                      <button class="btn btn-link plus-minus-toggle" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1"></button>
+                  </h5>
+                  <div id="faqCollapse1" class="collapse">
+                      <div class="card-body">
+                          Answer 1: An investment is...
+                      </div>
+                  </div>
+              </div>
+
+              <div class="faq-item">
+                  <h5 class="faq-question">
+                      Question 2: How can I start investing?
+                      <button class="btn btn-link plus-minus-toggle" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2"></button>
+                  </h5>
+                  <div id="faqCollapse2" class="collapse">
+                      <div class="card-body">
+                          Answer 2: To start investing...
+                      </div>
+                  </div>
+              </div>
+
+              <div class="faq-item">
+                <h5 class="faq-question">
+                    Question 3: What is an investment?
+                    <button class="btn btn-link plus-minus-toggle" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3"></button>
+                </h5>
+                <div id="faqCollapse3" class="collapse">
+                    <div class="card-body">
+                        Answer 3: An investment is...
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+              <h5 class="faq-question">
+                  Question 4: What is an investment?
+                  <button class="btn btn-link plus-minus-toggle" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4"></button>
+              </h5>
+              <div id="faqCollapse4" class="collapse">
+                  <div class="card-body">
+                      Answer 4: An investment is...
+                  </div>
+              </div>
+            </div>
+
+          <div class="faq-item">
+            <h5 class="faq-question">
+                Question 5: What is an investment?
+                <button class="btn btn-link plus-minus-toggle" data-toggle="collapse" data-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5"></button>
+            </h5>
+            <div id="faqCollapse5" class="collapse">
+                <div class="card-body">
+                    Answer 5: An investment is...
+                </div>
+            </div>
+          </div>     <!-- Add more FAQ items here -->
+    </div>
+</div>
+      <div class="col-md-4 border-left">
+          <img src="images/faqs.jpg" alt="Investment Image" class="img-fluid faq-image">
+      </div>
   </div>
 </div>
 <!-- Include Bootstrap JS and jQuery -->

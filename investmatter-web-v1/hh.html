@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment FAQs</title>
+    <!-- Add Bootstrap CSS link here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="animation.js"></script>
+    <style>
+        /* Custom CSS for FAQ section */
+        .faq-question {
+          cursor: pointer;
+          color: #000;
+        }
+
+        .faq-question:hover {
+          color: #007bff; /* Change to blue on hover */
+        }
+
+        .plus-minus-toggle::before {
+          content: "+"; /* Plus sign initially */
+          font-size: 24px;
+          float: right; /* Move to the right */
+          margin-left: 10px;
+        }
+
+        .faq-container {
+          border: 1px solid #ccc;
+          padding: 20px;
+          margin-top: 20px;
+        }
+
+        .faq-item {
+          border-bottom: 1px solid #ccc; /* Add border below each question */
+          padding: 10px 0; /* Add padding below each question */
+        }
+
+        .faq-item.collapsed .plus-minus-toggle::before {
+          content: "-";
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <!-- FAQ items -->
+                    <div class="faq-item">
+                        <h5 class="faq-question" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                            Question 1: What is an investment?
+                            <span class="plus-minus-toggle"></span>
+                        </h5>
+                        <div id="faqCollapse1" class="collapse">
+                            <div class="card-body">
+                                Answer 1: An investment is...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h5 class="faq-question" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            Question 2: How can I start investing?
+                            <span class="plus-minus-toggle"></span>
+                        </h5>
+                        <div id="faqCollapse2" class="collapse">
+                            <div class="card-body">
+                                Answer 2: To start investing...
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more FAQ items here -->
+                </div>
+            </div>
+            <div class="col-md-4 border-left">
+                <h2>FAQ Image</h2>
+                <img src="investment-image.jpg" alt="Investment Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery CDN links here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
