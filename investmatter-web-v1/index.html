@@ -11,7 +11,7 @@
       /*Change this font using google fonts "Use Poppins"*/
       *{
       font-family: poppins;
-    }
+      }
         /* Custom CSS for the background image section */
         body, html {
             width: 100%;
@@ -117,7 +117,7 @@
             margin: 0 20px; /* Add spacing between text items */
         }
         #competence-grid {
-          padding: 20px;
+          padding: 0px;
           margin-top: 70px;
         }
         #projectInvestmentText {
@@ -195,45 +195,37 @@
           border-radius: 15px;
           text-decoration: none; /* Remove underlines from the button */
         }
-        .site-footer {
-            width: 100%; 
-            background-color: #002349; /* Blue background color */
-            color: #ffffff; /* White text color */
-            padding: 20px 0;
-            width: 100%;
-         }
+        .custom-footer {
+      margin-top: 3%;
+      box-sizing: border-box;
+      background-color: #002349;
+      color: white;
+      display: flex;
+      gap: 5%;
+      flex-wrap: wrap; /* Allow columns to wrap on small screens */
+      border-bottom: 2px solid #ffffff;
+    }
+ .footer-item h3{
+  font-size: 18px;
+ }
+    .footer-item {
+      margin-top: 1.5%;
+    }
 
-        .footer-grid {
-            display: flex;
-            gap: 50px;
-            flex-wrap: wrap; /* Allow columns to wrap on small screens */
-            border-bottom: 2px solid #ffffff;
-        }
+    .item-1 {
+      list-style: none;
+    }
 
-        .footer-grid h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+    .item-2 {
+      margin-bottom: 2%;
+    }
 
-        .footer-grid-item {
-            text-align: left;
-        }
-
-        .footer-grid-item ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-grid-item ul li {
-            margin-bottom: 5px;
-        }
-
-        .footer-grid-item a {
-            text-decoration: none;
-            color: #ffffff; /* White link color */
-        }
-        
-        .copyright {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .copyright {
+      background-color: #002349;
             text-align: center;
             color: #ffffff; /* White text color */
             padding: 10px 0;
@@ -416,7 +408,8 @@
 </div>
 <div class="container" id="competence-grid">
   <div class="gridtitle">
-  <h1 id="gridtitle">WHAT OUR CUSTOMERS ASK</h1>
+    <h1 id="gridtitle">WHAT OUR CUSTOMERS ASK</h1>
+  </div>
 </div>
 <div class="container mt-5">
   <div class="row">
@@ -490,57 +483,59 @@
           <img src="images/faqs.jpg" alt="Investment Image" class="img-fluid faq-image">
       </div>
   </div>
+  </div>
 </div>
 
-<footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Contact and Address -->
-        <div class="footer-grid-item contact-address">
-          <h3>INVESTMATTER GROUP <br>OF COMPANIES </h3>
-          <ul>
-            <li><a href="#"><img src="images/phone.png" alt="0654 997 111" height="18px"></a>0654 997 111</li>
-            <li><a href="#"><img src="images/location.png" alt="Dar es Salaam, Tanzania" height="18px"></a>Dar es Salaam, Tanzania</li>
-            <li><a href="#"><img src="images/clock.png" alt="07:00AM - 19:00PM" height="18px"></a>07:00AM - 19:00PM</li>
-          </ul>
-        </div>
-  
-        <!-- Social Media Links -->
-        <div class="footer-grid-item social-media">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#"><img src="images/facebook.png" alt="Facebook" height="18px"></a>Facebook</li>
-            <li><a href="#"><img src="images/twitter.png" alt="Twitter" height="18px"></a>Twitter</li>
-            <li><a href="#"><img src="images/linkedin.png" alt="linkedin" height="18px"></a>linkedin</li>
-          </ul>
-        </div>
-  
-        <!-- Site Links -->
-        <div class="footer-grid-item site-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-  
-        <!-- Special Links -->
-        <div class="footer-grid-item special-links">
-          <h3>Special Links</h3>
-          <ul>
-            <li><a href="#">Start Investment</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Online Support</a></li>
-          </ul>
-        </div>
-      </div>
+  <!--Footer Section-->
+  <div class="container-fluid custom-footer">
+    <!--Contact and Address section-->
+    <div class="footer-item contact-info">
+      <ul class="item-1">
+        <h3>INVESTMATTER GROUP <br>OF COMPANIES </h3>
+        <li class="item-2"><a href="#"><img src="images/phone.png" alt="0654 997 111" height="18px"></a> 0654 997 111
+        </li>
+        <li class="item-2"><a href="#"><img src="images/location.png" alt="Dar es Salaam, Tanzania" height="18px"></a>
+          Dar es Salaam, Tanzania</li>
+        <li class="item-2"><a href="#"><img src="images/clock.png" alt="07:00AM - 19:00PM" height="18px"></a> 07:00AM -
+          19:00PM</li>
+      </ul>
     </div>
-    <!-- Copyright Text -->
+<!--Social media accounts section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Follow Us</h3>
+        <li class="item-2"><a href="#"><img src="images/facebook.png" alt="Facebook" height="18px"></a> Facebook</li>
+        <li class="item-2"><a href="#"><img src="images/twitter.png" alt="Twitter" height="18px"></a> Twitter</li>
+        <li class="item-2"><a href="#"><img src="images/linkedin.png" alt="linkedin" height="18px"></a> Linkedin</li>
+      </ul>
+    </div>
+<!--Quick links section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Quick Links</h3>
+        <li class="item-2"><a href="#">Home</a></li>
+        <li class="item-2"><a href="#">About</a></li>
+        <li class="item-2"><a href="#">Services</a></li>
+      </ul>
+    </div>
+    <!--Special links section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Special Links</h3>
+        <li class="item-2"><a href="#">Start Investment</a></li>
+        <li class="item-2"><a href="#">FAQs</a></li>
+        <li class="item-2"><a href="#">Online Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--Copyright section-->
   <div class="copyright">
     &copy; 2023 InvestMatter Group of Companies
   </div>
-  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous">
+  </script>
 <!-- Include Bootstrap JS and jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
