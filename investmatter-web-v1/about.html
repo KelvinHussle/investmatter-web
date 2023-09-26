@@ -10,59 +10,60 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
-        /* For responsiveness use these media queries */
-        @media screen and (max-width: 576px) {
+    /* For responsiveness use these media queries */
+    @media screen and (max-width: 576px) {
 
-/* Styles for small screen devices to a maximum width of 576px */
-.custom-footer {
-  margin-top: 3%;
-  box-sizing: border-box;
-  background-color: #002349;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
+      /* Styles for small screen devices to a maximum width of 576px */
+      .custom-footer {
+        margin-top: 3%;
+        box-sizing: border-box;
+        background-color: #002349;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-p {
-  font-size: 4vw;
-}
+      p {
+        font-size: 4vw;
+      }
 
-h2,
-h3 {
-  font-size: 6vw;
-}
+      h2,
+      h3 {
+        font-size: 6vw;
+      }
 
-.about-image {
-  height: 350px;
-  background-size: cover;
-}
+      .about-image {
+        height: 350px;
+        background-size: cover;
+      }
 
-.shape {
-  margin-top: 3%;
-  box-sizing: border-box;
-  background-color: #002349;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+      .shape {
+        margin-top: 3%;
+        box-sizing: border-box;
+        background-color: #002349;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
 
-.btn {
-  --bs-btn-padding-y: .38rem;
-  --bs-btn-padding-x: .95rem;
-  --bs-btn-font-size: 0.7rem;
-  --bs-btn-border-radius: .75rem;
-}
+      .btn {
+        --bs-btn-padding-y: .38rem;
+        --bs-btn-padding-x: .95rem;
+        --bs-btn-font-size: 0.7rem;
+        --bs-btn-border-radius: .75rem;
+      }
 
-}
+    }
 
-/* the styles below are for all screen sizes*/
+    /* the styles below are for all screen sizes*/
     /*Change this font using google fonts "Use Poppins"*/
-    *{
+    * {
       font-family: poppins;
     }
+
     #container {
       height: 300px;
       margin-top: -5%;
@@ -83,7 +84,8 @@ h3 {
       background-size: cover;
       background-position: start;
     }
-/* transition boxes*/
+
+    /* transition boxes*/
     .box {
       text-align: center;
       box-sizing: border-box;
@@ -113,7 +115,8 @@ h3 {
       background-size: contain;
       color: white;
     }
-/*need assistance container & font and button*/
+
+    /*need assistance container & font and button*/
     .shape {
       margin-top: 3%;
       box-sizing: border-box;
@@ -132,11 +135,25 @@ h3 {
     }
 
 
-    .assistance{
+    .assistance {
       font-weight: bold;
       font-size: 2.2vw;
     }
-/*Custom footer */
+
+    /*custom navigation*/
+    .navbar {
+      background-color: #002349;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: #ffc600;
+    }
+
+    /*Custom footer */
     .custom-footer {
       margin-top: 3%;
       box-sizing: border-box;
@@ -144,12 +161,15 @@ h3 {
       color: white;
       display: flex;
       gap: 5%;
-      flex-wrap: wrap; /* Allow columns to wrap on small screens */
+      flex-wrap: wrap;
+      /* Allow columns to wrap on small screens */
       border-bottom: 2px solid #ffffff;
     }
- .footer-item h3{
-  font-size: 18px;
- }
+
+    .footer-item h3 {
+      font-size: 18px;
+    }
+
     .footer-item {
       margin-top: 1.5%;
     }
@@ -166,50 +186,50 @@ h3 {
       text-decoration: none;
       color: white;
     }
+
     .copyright {
       background-color: #002349;
-            text-align: center;
-            color: #ffffff; /* White text color */
-            padding: 10px 0;
-        }
-
+      text-align: center;
+      color: #ffffff;
+      /* White text color */
+      padding: 10px 0;
+    }
   </style>
 </head>
 
 <body>
   <!--Navigation section-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid ms-4">
-      <a class="navbar-brand" href="#">Investmatter Group</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container-fluid mx-5">
+        <a class="navbar-brand text-white" href="#">Investmatter Group</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid mx-2">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link"  href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item ms-4">
-              <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item ms-4">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="services.html">Services</a>
             </li>
-            <li class="nav-item ms-4">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="contacts.html">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav me-4">
-            <li class="nav-item">
-              <button class="btn btn btn-dark" type="submit">Get Started</button>
-            </li>
+              <li class="nav-item">
+                  <a href="#" class="btn  btn-outline-warning"
+                  style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;">Get Started</a>
+                </li>
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+</nav>
   <!--About Us Banner-->
   <div class="container-fluid d-flex justify-content-center align-items-center" id="container">
     <h3 class="text-center text-white fw-bold">About Us</h3>
@@ -277,7 +297,8 @@ h3 {
   <!--Contact Us section-->
 
   <div class="container-fluid shape ">
-    <div class="column text-white me-2 mt-3 assistance"><p>Do you need more assistance?</p>
+    <div class="column text-white me-2 mt-3 assistance">
+      <p>Do you need more assistance?</p>
     </div>
     <div class="column btn btn-outline-warning btn-lg btn-custom">Contact Us</div>
   </div>
@@ -296,7 +317,7 @@ h3 {
           19:00PM</li>
       </ul>
     </div>
-<!--Social media accounts section-->
+    <!--Social media accounts section-->
     <div class="footer-item">
       <ul class="item-1">
         <h3>Follow Us</h3>
@@ -305,7 +326,7 @@ h3 {
         <li class="item-2"><a href="#"><img src="images/linkedin.png" alt="linkedin" height="18px"></a> Linkedin</li>
       </ul>
     </div>
-<!--Quick links section-->
+    <!--Quick links section-->
     <div class="footer-item">
       <ul class="item-1">
         <h3>Quick Links</h3>
@@ -328,9 +349,9 @@ h3 {
   <div class="copyright">
     &copy; 2023 InvestMatter Group of Companies
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

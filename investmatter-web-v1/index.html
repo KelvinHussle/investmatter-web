@@ -209,6 +209,17 @@
           border-radius: 15px;
           text-decoration: none; /* Remove underlines from the button */
         }
+        /*custom navigation*/
+        .navbar{
+  background-color: #002349;
+}
+.nav-link{
+  color: white;
+}
+.nav-link:hover{
+  color:#ffc600;
+}
+
     /*Custom footer */
         .custom-footer {
       margin-top: 3%;
@@ -277,9 +288,9 @@
 <body>
 
 <!-- Navigation section -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid ms-4">
-        <a class="navbar-brand" href="#">Investmatter Group</a>
+        <a class="navbar-brand text-white" href="#">Investmatter Group</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -287,7 +298,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item ms-3">
               <a class="nav-link" href="about.html">About Us</a>
@@ -301,7 +312,7 @@
           </ul>
           <ul class="navbar-nav me-4">
               <li class="nav-item">
-                  <a href="#" class="btn btn btn-dark"
+                  <a href="#" class="btn  btn-outline-warning"
                   style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;">Get Started</a>
                 </li>
           </ul>
@@ -415,7 +426,7 @@
       <div class="container-fluid">
         <div class="horizontal-text-container">
           <p class="horizontal-text" id="projectInvestmentText">Looking for a potential project to invest?</p>
-          <a href="#" class="btn btn-dark read-more-btn" id="projectInvestTextButton">Get Started</a>
+          <a href="#" class="mb-2 btn btn-outline-warning" >Get Started</a>
         </div>
     </div>
     </div>

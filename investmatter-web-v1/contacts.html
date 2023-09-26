@@ -33,8 +33,13 @@ h3 {
   font-size: 6vw;
 }
 
-
-
+.custom-container{
+      box-sizing: border-box;
+      margin-top: 3%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 .btn {
   --bs-btn-padding-y: .38rem;
   --bs-btn-padding-x: .95rem;
@@ -57,6 +62,37 @@ h3 {
       --bs-btn-font-size: 1.2rem;
       --bs-btn-border-radius: .75rem;
     }
+    .custom-container{
+      box-sizing: border-box;
+      background-color: #002349;
+      color:white;
+      margin-top: -3%;
+      padding:3%;
+      display: flex;
+      justify-content: center;
+      gap:20%;
+    }
+    .item{
+list-style: none;
+    }
+    .items{
+      margin-bottom: 3%;
+    }
+    .custom-social-container{
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+    }
+            /*custom navigation*/
+            .navbar{
+  background-color: #002349;
+}
+.nav-link{
+  color: white;
+}
+.nav-link:hover{
+  color:#ffc600;
+}
 
 /*Custom footer */
     .custom-footer {
@@ -113,7 +149,15 @@ h3 {
         color: white; /* Text color */
         border-color: black; /* Border color */
     }
-
+    .service-button{
+  border-color: #002349;
+  color: #002349;
+ 
+}
+.service-button:hover{
+  background-color: #002349;
+  color: #ffffff;
+}
     .btn.btn-primary.form-control:hover {
         background-color: #002349f1; /* Darker color on hover */
         border-color: #333; /* Darker border color on hover */
@@ -144,73 +188,78 @@ h3 {
 
 <body>
   <!--Navigation section-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color:white;">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid ms-4">
-      <a class="navbar-brand" href="#">Investmatter Group</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container-fluid mx-5">
+        <a class="navbar-brand text-white" href="#">Investmatter Group</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid mx-2">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item ms-4">
-              <a class="nav-link active" href="about.html">About Us</a>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="about.html">About Us</a>
             </li>
-            <li class="nav-item ms-4">
+            <li class="nav-item ms-3">
               <a class="nav-link" href="services.html">Services</a>
             </li>
-            <li class="nav-item ms-4">
-              <a class="nav-link" href="#">Contact Us</a>
+            <li class="nav-item ms-3">
+              <a class="nav-link" href="contacts.html">Contact Us</a>
             </li>
           </ul>
           <ul class="navbar-nav me-4">
-            <li class="nav-item">
-              <button class="btn btn btn-dark" type="submit">Get Started</button>
-            </li>
+              <li class="nav-item">
+                  <a href="#" class="btn  btn-outline-warning"
+                  style="--bs-btn-padding-y: .38rem; --bs-btn-padding-x: .95rem; --bs-btn-font-size: .95rem; --bs-btn-border-radius:.75rem;">Get Started</a>
+                </li>
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+</nav>
   <!-- Banner Section -->
   <div class="container-fluid d-flex justify-content-center align-items-center" id="container">
     <p class="text-center text-white">Contact us</p>
   </div>
   <!--Contact section-->
   <!-- Three Separate Sections -->
-<div class="container-fluid" id="contactdetails">
-    <div class="row text-center">
-      <!-- Contact Us On -->
-      <div class="col">
-        <h1>Contact Us On</h3>
-            <ul class="item-1">
-                <li class="item-2"><a href="#"><img src="images/phoneblack.png" alt="0654 997 111" height="18px"></a> 0654 997 111</li>
-                <li class="item-2"><a href="#"><img src="images/mail.png" alt="mail@investmedia.com" height="18px"></a> mail@investmedia.com</li>
-              </ul>
-      </div>
-      
-      <!-- Our Location -->
-      <div class="col">
-        <h3>Our Location</h1>
-        <p><a href="#"><img src="images/locationblack.png" height="18px" alt="Dar es Salaam"></a>Dar es Salaam, Tanzania</p>
-      </div>
-      
-      <!-- Stay Social -->
-      <div class="col-lg-4 col-md-12 col-sm-12 mb-4 text-center">
-        <h1>Stay Social</h1>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#"><img src="images/facebook2.png" height="36px" alt="Facebook"></a></li>
-          <li class="list-inline-item"><a href="#"><img src="images/twitter2.png" height="36px" alt="Twitter"></a></li>
-          <li class="list-inline-item"><a href="#"><img src="images/linkedin2.png" height="36px" alt="LinkedIn"></a></li>
-        </ul>
-      </div>
-    </div>
+<div class="container-fluid custom-container">
+  <div class="column">
+    <ul class="item">
+      <h3>Contact Us</h3>
+        <li class="items"><a href="#"><img src="images/phone.png" alt="0654 997 111" height="18px"></a> 0654 997 111</li>
+        <li class="items"><a href="#"><img src="images/mail.png" alt="mail@investmatter.com" height="20px"></a> mail@investmedia.com</li>
+      </ul>
   </div>
+  <div class="column">
+    <ul class="item">
+      <h3>Visit Our Office</h3>
+        <li class="items"><a href="#"><img src="images/location.png" height="20px" alt="Dar es Salaam"></a>Dar es Salaam, Tanzania</li>
+      </ul>
+  </div>
+  <div class="column">
+    <ul style="list-style: none;">
+      <h3 class="">Follow Us</h3>
+    </ul>
+    <ul class="custom-social-container">
+      <li class="social">
+        <a href="#"><img src="images/facebook2.png" height="36px" alt="Facebook"></a>
+      </li>
+      <li class="social">
+        <a href="#"><img src="images/twitter2.png" height="36px" alt="Twitter"></a>
+      </li>
+      <li class="social">
+        <a href="#"><img src="images/linkedin2.png" height="36px" alt="LinkedIn"></a>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+
  <!-- Message Form Section -->
+ <h3 class="text-center mt-3">Send a Message</h3>
 <section class="container my-5">
     <form id="message-form">
       <div class="mb-3">
@@ -229,7 +278,7 @@ h3 {
         <label for="message" class="form-label">Message</label>
         <textarea class="form-control grey-input" id="message" name="message" rows="4" required></textarea>
       </div>
-      <button type="submit" class="btn btn-primary form-control">Send Message</button>
+      <button type="submit" class="btn service-button form-control">Send Message</button>
     </form>
   </section>
   <iframe
@@ -239,7 +288,6 @@ h3 {
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.334570119163!2d39.2331264!3d-6.8222976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_INVESTMATTER!2sINVESTMATTER!5e0!3m2!1sen!2sus!4vYOUR_EMBED_API_KEY"
   allowfullscreen
 ></iframe>
-
   <!--Footer Section-->
   <div class="container-fluid custom-footer">
     <!--Contact and Address section-->
@@ -290,5 +338,35 @@ h3 {
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
 </body>
-
 </html>
+<!--
+<div class="container-fluid" id="contactdetails">
+    <div class="row text-center">
+    
+      <div class="col">
+        
+            <ul class="item">
+              <h3>Contact Us On</h3>
+                <li class="items"><a href="#"><img src="images/phoneblack.png" alt="0654 997 111" height="18px"></a> 0654 997 111</li>
+                <li class="items"><a href="#"><img src="images/mail.png" alt="mail@investmedia.com" height="18px"></a> mail@investmedia.com</li>
+              </ul>
+      </div>
+      
+      
+      <div class="col">
+        <h3>Our Location</h1>
+        <p><a href="#"><img src="images/locationblack.png" height="18px" alt="Dar es Salaam"></a>Dar es Salaam, Tanzania</p>
+      </div>
+      
+      
+      <div class="col-lg-4 col-md-12 col-sm-12 mb-4 text-center">
+        <h3>Stay Social</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><img src="images/facebook2.png" height="36px" alt="Facebook"></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/twitter2.png" height="36px" alt="Twitter"></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/linkedin2.png" height="36px" alt="LinkedIn"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+-->
