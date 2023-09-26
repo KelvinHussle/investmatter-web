@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investmatter</title>
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+  
+        /* For responsiveness use these media queries */
+        @media screen and (max-width: 576px) {
+
+/* Styles for small screen devices to a maximum width of 576px */
+.custom-footer {
+  margin-top: 3%;
+  box-sizing: border-box;
+  background-color: #002349;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+p {
+  font-size: 4vw;
+}
+
+h2,
+h3 {
+  font-size: 6vw;
+}
+
+
+
+.btn {
+  --bs-btn-padding-y: .38rem;
+  --bs-btn-padding-x: .95rem;
+  --bs-btn-font-size: 0.7rem;
+  --bs-btn-border-radius: .75rem;
+}
+
+}
+
+/* the styles below are for all screen sizes*/
+    /*Change this font using google fonts "Use Poppins"*/
+    *{
+      font-family: poppins;
+    }
+   
+
+    .btn {
+      --bs-btn-padding-y: .38rem;
+      --bs-btn-padding-x: .95rem;
+      --bs-btn-font-size: 1.2rem;
+      --bs-btn-border-radius: .75rem;
+    }
+
+/*Custom footer */
+    .custom-footer {
+      margin-top: 3%;
+      box-sizing: border-box;
+      background-color: #002349;
+      color: white;
+      display: flex;
+      gap: 5%;
+      flex-wrap: wrap; /* Allow columns to wrap on small screens */
+      border-bottom: 2px solid #ffffff;
+    }
+ .footer-item h3{
+  font-size: 18px;
+ }
+    .footer-item {
+      margin-top: 1.5%;
+    }
+
+    .item-1 {
+      list-style: none;
+    }
+
+    .item-2 {
+      margin-bottom: 2%;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .copyright {
+        background-color: #002349;
+        text-align: center;
+        color: #ffffff; /* White text color */
+        padding: 10px 0;
+        }
+     #container {
+      height: 300px;
+      margin-top: -5%;
+      width: 100%;
+      background-image: url('images/contact.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+     #contactdetails {
+        margin-top: 30px;
+     }
+     .grey-input {
+        background-color: lightgrey;
+    }
+    .btn.btn-primary.form-control {
+        background-color: #002349;
+        color: white; /* Text color */
+        border-color: black; /* Border color */
+    }
+
+    .btn.btn-primary.form-control:hover {
+        background-color: #002349f1; /* Darker color on hover */
+        border-color: #333; /* Darker border color on hover */
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+  <script>
+    // Function to initialize the map
+    function initMap() {
+      // Coordinates for your location (replace with your actual latitude and longitude)
+      var location = { lat: -6.7924, lng: 39.2083 };
+  
+      // Create a map centered at the specified location
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15, // Adjust the zoom level as needed
+        center: location
+      });
+  
+      // Create a marker for your location
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Investmatter Location' // Tooltip text for the marker
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <!--Navigation section-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color:white;">
+    <div class="container-fluid ms-4">
+      <a class="navbar-brand" href="#">Investmatter Group</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container-fluid mx-5">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link active" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav me-4">
+            <li class="nav-item">
+              <button class="btn btn btn-dark" type="submit">Get Started</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Banner Section -->
+  <div class="container-fluid d-flex justify-content-center align-items-center" id="container">
+    <p class="text-center text-white">Contact us</p>
+  </div>
+  <!--Contact section-->
+  <!-- Three Separate Sections -->
+<div class="container-fluid" id="contactdetails">
+    <div class="row text-center">
+      <!-- Contact Us On -->
+      <div class="col">
+        <h1>Contact Us On</h3>
+            <ul class="item-1">
+                <li class="item-2"><a href="#"><img src="images/phoneblack.png" alt="0654 997 111" height="18px"></a> 0654 997 111</li>
+                <li class="item-2"><a href="#"><img src="images/mail.png" alt="mail@investmedia.com" height="18px"></a> mail@investmedia.com</li>
+              </ul>
+      </div>
+      
+      <!-- Our Location -->
+      <div class="col">
+        <h3>Our Location</h1>
+        <p><a href="#"><img src="images/locationblack.png" height="18px" alt="Dar es Salaam"></a>Dar es Salaam, Tanzania</p>
+      </div>
+      
+      <!-- Stay Social -->
+      <div class="col-lg-4 col-md-12 col-sm-12 mb-4 text-center">
+        <h1>Stay Social</h1>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><img src="images/facebook2.png" height="36px" alt="Facebook"></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/twitter2.png" height="36px" alt="Twitter"></a></li>
+          <li class="list-inline-item"><a href="#"><img src="images/linkedin2.png" height="36px" alt="LinkedIn"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ <!-- Message Form Section -->
+<section class="container my-5">
+    <form id="message-form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control grey-input" id="name" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control grey-input" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control grey-input" id="subject" name="subject" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control grey-input" id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-control">Send Message</button>
+    </form>
+  </section>
+  <iframe
+  width=100%
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.334570119163!2d39.2331264!3d-6.8222976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_INVESTMATTER!2sINVESTMATTER!5e0!3m2!1sen!2sus!4vYOUR_EMBED_API_KEY"
+  allowfullscreen
+></iframe>
+
+  <!--Footer Section-->
+  <div class="container-fluid custom-footer">
+    <!--Contact and Address section-->
+    <div class="footer-item contact-info">
+      <ul class="item-1">
+        <h3>INVESTMATTER GROUP <br>OF COMPANIES </h3>
+        <li class="item-2"><a href="#"><img src="images/phone.png" alt="0654 997 111" height="18px"></a> 0654 997 111
+        </li>
+        <li class="item-2"><a href="#"><img src="images/location.png" alt="Dar es Salaam, Tanzania" height="18px"></a>
+          Dar es Salaam, Tanzania</li>
+        <li class="item-2"><a href="#"><img src="images/clock.png" alt="07:00AM - 19:00PM" height="18px"></a> 07:00AM -
+          19:00PM</li>
+      </ul>
+    </div>
+<!--Social media accounts section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Follow Us</h3>
+        <li class="item-2"><a href="#"><img src="images/facebook.png" alt="Facebook" height="18px"></a> Facebook</li>
+        <li class="item-2"><a href="#"><img src="images/twitter.png" alt="Twitter" height="18px"></a> Twitter</li>
+        <li class="item-2"><a href="#"><img src="images/linkedin.png" alt="linkedin" height="18px"></a> Linkedin</li>
+      </ul>
+    </div>
+<!--Quick links section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Quick Links</h3>
+        <li class="item-2"><a href="#">Home</a></li>
+        <li class="item-2"><a href="#">About</a></li>
+        <li class="item-2"><a href="#">Services</a></li>
+      </ul>
+    </div>
+    <!--Special links section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Special Links</h3>
+        <li class="item-2"><a href="#">Start Investment</a></li>
+        <li class="item-2"><a href="#">FAQs</a></li>
+        <li class="item-2"><a href="#">Online Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--Copyright section-->
+  <div class="copyright">
+    &copy; 2023 InvestMatter Group of Companies
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
