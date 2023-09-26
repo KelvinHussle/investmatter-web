@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investmatter</title>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
@@ -12,11 +13,33 @@
     @media screen and (max-width: 576px) {
 
       /* Styles for small screen devices to a maximum width of 576px */
+      .custom-footer {
+        margin-top: 3%;
+        box-sizing: border-box;
+        background-color: #002349;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .word {
-        font-size: 18px;
+        font-size: 16.5px;
       }
     }
-
+    #container {
+      height: 300px;
+      margin-top: -5%;
+      background-image: url('images/Background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    *{
+      font-family: poppins;
+      }
+      .shape{
+        background-color: #002349;
+      }
     .icon {
       height: 40px;
       width: 40px;
@@ -28,8 +51,25 @@
 
     .items {
       margin-bottom: 1%;
+      color: white;
+      display: flex;
     }
-
+    .bttn{
+      display: flex;
+      justify-content: center;
+    }
+.custom-button{
+  width: 200px;
+}
+.service-button{
+  border-color: #002349;
+  color: #002349;
+ 
+}
+.service-button:hover{
+  background-color: #002349;
+  color: #ffffff;
+}
     /*Custom footer */
     .custom-footer {
       margin-top: 3%;
@@ -87,13 +127,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link"  href="index.html">Home</a>
             </li>
             <li class="nav-item ms-4">
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item ms-4">
-              <a class="nav-link active" href="services.html">Services</a>
+              <a class="nav-link active" aria-current="page" href="services.html">Services</a>
             </li>
             <li class="nav-item ms-4">
               <a class="nav-link" href="#">Contact Us</a>
@@ -109,11 +149,13 @@
     </div>
   </nav>
   <!--Services image section -->
-
+  <div class="container-fluid d-flex justify-content-center align-items-center" id="container">
+    <h3 class="text-center text-white fw-bold">Services</h3>
+  </div>
 
   <!--Services Cards section-->
   <div class="container mt-3">
-    <h3 class="text-center fw-bold">Services</h3>
+    
     <p class="text-center fw-bold fs-4">Explore Wide Range Of Services We Provide</p>
     <div class="row">
       <!--First Card-->
@@ -121,14 +163,14 @@
         <div class="card">
           <img src="images/mkt.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Market Research & Analysis</h5>
+            <h5 class="card-title fw-bold">Market Research & Analysis</h5>
             <p class="card-text">
               We conduct market research and analysis to identify the most attractive investment opportunities in
               Tanzania.
               We also provide our clients with insights into the Tanzanian business environment and the key trends that
-              are shaping the continent's development.
+              are shaping Tanzania's development.
             </p>
-            <a href="contact.html" class="btn btn-primary d-flex justify-content-center align-items-center">Get a
+            <a href="contact.html" class="btn service-button d-flex justify-content-center align-items-center">Get a
               Quote</a>
           </div>
         </div>
@@ -138,14 +180,13 @@
         <div class="card">
           <img src="images/target.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Investor targeting & Outreach</h5>
+            <h5 class="card-title fw-bold">Investor targeting & Outreach</h5>
             <p class="card-text">
               We target and outreach to potential investors on behalf of our clients. We have a database of thousands of
               investors who are interested in investing in Tanzania. We also have a strong network of relationships with
               investors around the world.
             </p>
-            <a href="contact.html" class="btn btn-primary d-flex justify-content-center align-items-center">Get a
-              Quote</a>
+            <a href="contact.html" class="btn service-button  d-flex justify-content-center align-items-center">Book Appointment</a>
           </div>
         </div>
       </div>
@@ -154,14 +195,14 @@
         <div class="card">
           <img src="images/deal.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Deal Structuring & Negotiation</h5>
+            <h5 class="card-title fw-bold">Deal Structuring & Negotiation</h5>
             <p class="card-text">
               We help our clients to structure and negotiate deals.
               We have a deep understanding of the legal and regulatory environment in Tanzania,
-              and we help our clients to avoid potential pitfalls during the investment.
+              and we help our clients to avoid potential pitfalls during the investment period.
               <br>
             </p>
-            <a href="contact.html" class="btn btn-primary d-flex justify-content-center align-items-center">Get a
+            <a href="contact.html" class="btn service-button d-flex justify-content-center align-items-center">Get a
               Quote</a>
           </div>
         </div>
@@ -169,10 +210,10 @@
       <!--End of cards-->
     </div>
   </div>
-  
+
   <!--Prospect education section-->
-  <div class="container mt-3">
-    <h3>Start Your Investment After Just Few Steps</h3>
+  <div class="container-fluid mt-3 shape">
+    <h3 class="text-white text-center pt-4 pb-3" >Start Your Investment After Just Few Steps</h3>
     <ul class="item">
       <li class="items">
         <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Contact Investmatter</h4>
@@ -189,17 +230,65 @@
       <li class="items">
         <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Make An Investment</h4>
       </li>
+      <li class="bttn">
+        <a href="" class="btn btn-outline-warning btn-lg custom-button">Get Started</a>
+      </li>
+      <li class="item" style="visibility: hidden;"> <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Make An Investment</h4></li>
     </ul>
   </div>
 
 
-
+  <!--Footer Section-->
+  <div class="container-fluid custom-footer">
+    <!--Contact and Address section-->
+    <div class="footer-item contact-info">
+      <ul class="item-1">
+        <h3>INVESTMATTER GROUP <br>OF COMPANIES </h3>
+        <li class="item-2"><a href="#"><img src="images/phone.png" alt="0654 997 111" height="18px"></a> 0654 997 111
+        </li>
+        <li class="item-2"><a href="#"><img src="images/location.png" alt="Dar es Salaam, Tanzania" height="18px"></a>
+          Dar es Salaam, Tanzania</li>
+        <li class="item-2"><a href="#"><img src="images/clock.png" alt="07:00AM - 19:00PM" height="18px"></a> 07:00AM -
+          19:00PM</li>
+      </ul>
+    </div>
+    <!--Social media accounts section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Follow Us</h3>
+        <li class="item-2"><a href="#"><img src="images/facebook.png" alt="Facebook" height="18px"></a> Facebook</li>
+        <li class="item-2"><a href="#"><img src="images/twitter.png" alt="Twitter" height="18px"></a> Twitter</li>
+        <li class="item-2"><a href="#"><img src="images/linkedin.png" alt="linkedin" height="18px"></a> Linkedin</li>
+      </ul>
+    </div>
+    <!--Quick links section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Quick Links</h3>
+        <li class="item-2"><a href="#">Home</a></li>
+        <li class="item-2"><a href="#">About</a></li>
+        <li class="item-2"><a href="#">Services</a></li>
+      </ul>
+    </div>
+    <!--Special links section-->
+    <div class="footer-item">
+      <ul class="item-1">
+        <h3>Special Links</h3>
+        <li class="item-2"><a href="#">Start Investment</a></li>
+        <li class="item-2"><a href="#">FAQs</a></li>
+        <li class="item-2"><a href="#">Online Support</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--Copyright section-->
+  <div class="copyright">
+    &copy; 2023 InvestMatter Group of Companies
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous">
-  </script>
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
