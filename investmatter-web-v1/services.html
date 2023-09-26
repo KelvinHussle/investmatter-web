@@ -2,23 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investmatter</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-         /* For responsiveness use these media queries */
-         @media screen and (max-width: 576px) {
-/* Styles for small screen devices to a maximum width of 576px */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investmatter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    /* For responsiveness use these media queries */
+    @media screen and (max-width: 576px) {
 
- }
+      /* Styles for small screen devices to a maximum width of 576px */
+      .word {
+        font-size: 18px;
+      }
+    }
 
-    </style>
+    .icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    .item {
+      list-style: none;
+    }
+
+    .items {
+      margin-bottom: 1%;
+    }
+
+    /*Custom footer */
+    .custom-footer {
+      margin-top: 3%;
+      box-sizing: border-box;
+      background-color: #002349;
+      color: white;
+      display: flex;
+      gap: 5%;
+      flex-wrap: wrap;
+      /* Allow columns to wrap on small screens */
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .footer-item h3 {
+      font-size: 18px;
+    }
+
+    .footer-item {
+      margin-top: 1.5%;
+    }
+
+    .item-1 {
+      list-style: none;
+    }
+
+    .item-2 {
+      margin-bottom: 2%;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .copyright {
+      background-color: #002349;
+      text-align: center;
+      color: #ffffff;
+      /* White text color */
+      padding: 10px 0;
+    }
+  </style>
 </head>
+
 <body>
- <!--Navigation section-->
- <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color:white;">
+  <!--Navigation section-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color:white;">
     <div class="container-fluid ms-4">
       <a class="navbar-brand" href="#">Investmatter Group</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -51,10 +109,97 @@
     </div>
   </nav>
   <!--Services image section -->
- 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+
+
+  <!--Services Cards section-->
+  <div class="container mt-3">
+    <h3 class="text-center fw-bold">Services</h3>
+    <p class="text-center fw-bold fs-4">Explore Wide Range Of Services We Provide</p>
+    <div class="row">
+      <!--First Card-->
+      <div class="col-md-4 mt-3">
+        <div class="card">
+          <img src="images/mkt.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Market Research & Analysis</h5>
+            <p class="card-text">
+              We conduct market research and analysis to identify the most attractive investment opportunities in
+              Tanzania.
+              We also provide our clients with insights into the Tanzanian business environment and the key trends that
+              are shaping the continent's development.
+            </p>
+            <a href="contact.html" class="btn btn-primary d-flex justify-content-center align-items-center">Get a
+              Quote</a>
+          </div>
+        </div>
+      </div>
+      <!--Second Card-->
+      <div class="col-md-4 mt-3">
+        <div class="card">
+          <img src="images/target.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Investor targeting & Outreach</h5>
+            <p class="card-text">
+              We target and outreach to potential investors on behalf of our clients. We have a database of thousands of
+              investors who are interested in investing in Tanzania. We also have a strong network of relationships with
+              investors around the world.
+            </p>
+            <a href="contact.html" class="btn btn-primary d-flex justify-content-center align-items-center">Get a
+              Quote</a>
+          </div>
+        </div>
+      </div>
+      <!--Third Card-->
+      <div class="col-md-4 mt-3">
+        <div class="card">
+          <img src="images/deal.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Deal Structuring & Negotiation</h5>
+            <p class="card-text">
+              We help our clients to structure and negotiate deals.
+              We have a deep understanding of the legal and regulatory environment in Tanzania,
+              and we help our clients to avoid potential pitfalls during the investment.
+              <br>
+            </p>
+            <a href="contact.html" class="btn btn-primary d-flex justify-content-center align-items-center">Get a
+              Quote</a>
+          </div>
+        </div>
+      </div>
+      <!--End of cards-->
+    </div>
+  </div>
+  
+  <!--Prospect education section-->
+  <div class="container mt-3">
+    <h3>Start Your Investment After Just Few Steps</h3>
+    <ul class="item">
+      <li class="items">
+        <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Contact Investmatter</h4>
+      </li>
+      <li class="items">
+        <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Discuss Your Investment Goals</h4>
+      </li>
+      <li class="items">
+        <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Get Investment Recommendations</h4>
+      </li>
+      <li class="items">
+        <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Conduct Due Diligence</h4>
+      </li>
+      <li class="items">
+        <h4 class="word"><img src="images/check.png" class="icon mb-1" alt=""> Make An Investment</h4>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
