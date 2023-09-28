@@ -157,27 +157,6 @@ list-style: none;
         border-color: #333; /* Darker border color on hover */
     }
   </style>
-  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
-  <script>
-    // Function to initialize the map
-    function initMap() {
-      // Coordinates for your location (replace with your actual latitude and longitude)
-      var location = { lat: -6.7924, lng: 39.2083 };
-  
-      // Create a map centered at the specified location
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15, // Adjust the zoom level as needed
-        center: location
-      });
-  
-      // Create a marker for your location
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: 'Investmatter Location' // Tooltip text for the marker
-      });
-    }
-  </script>
 </head>
 
 <body>
