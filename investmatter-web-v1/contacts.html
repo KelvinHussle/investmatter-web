@@ -234,7 +234,7 @@ list-style: none;
  <!-- Message Form Section -->
  <h3 class="text-center mt-3">Send a Message</h3>
 <section class="container my-5">
-    <form id="message-form">
+    <form id="message-form" action="mailto:example@example.com" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Your Name</label>
         <input type="text" class="form-control grey-input" id="name" name="name" required>
@@ -249,7 +249,7 @@ list-style: none;
       </div>
       <div class="mb-3">
         <label for="message" class="form-label">Message</label>
-        <textarea class="form-control grey-input" id="message" name="message" rows="4" required></textarea>
+        <textarea class="form-control grey-input" id="body" name="body" rows="4" required></textarea>
       </div>
       <button type="submit" class="btn service-button form-control">Send Message</button>
     </form>
